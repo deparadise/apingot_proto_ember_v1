@@ -1,0 +1,10 @@
+{
+  "name": "code_pot_BE",
+  "version": "0.0.1",
+  "description": "Starting Back End API Project",
+  "main": "app.js",
+  "repository": "git@github.com:deparadise/code_pot_BE.git",
+  "author": "David Pineda <david.pineda@deparadise.com>",
+  "license": "MIT",
+  "private": false
+}
