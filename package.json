@@ -6,5 +6,8 @@
   "repository": "git@github.com:deparadise/code_pot_BE.git",
   "author": "David Pineda <david.pineda@deparadise.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
