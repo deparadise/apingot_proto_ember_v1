@@ -1,13 +1,24 @@
 {
-  "name": "code_pot_BE",
-  "version": "0.0.1",
-  "description": "Starting Back End API Project",
-  "main": "app.js",
-  "repository": "git@github.com:deparadise/code_pot_BE.git",
-  "author": "David Pineda <david.pineda@deparadise.com>",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "express": "^4.16.3"
-  }
+	"name": "code_pot_BE",
+	"version": "0.0.1",
+	"description": "Starting Back End API Project",
+	"main": "app.js",
+	"scripts": {
+		"test": "tests"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/deparadise/code_pot_BE.git"
+	},
+	"author": "David Pineda <david.pineda@deparadise.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"express": "^4.16.3"
+	},
+	"bugs": {
+		"url": "https://github.com/deparadise/code_pot_BE/issues"
+	},
+	"homepage": "https://github.com/deparadise/code_pot_BE#readme",
+	"devDependencies": {},
 }
