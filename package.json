@@ -10,14 +10,14 @@
 		"type": "git",
 		"url": "git+ssh://git@github.com/deparadise/code_pot_BE.git"
 	},
+	"bugs": {
+		"url": "https://github.com/deparadise/code_pot_BE/issues"
+	},
 	"author": "David Pineda <david.pineda@deparadise.com>",
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
 		"express": "^4.16.3"
-	},
-	"bugs": {
-		"url": "https://github.com/deparadise/code_pot_BE/issues"
 	},
 	"homepage": "https://github.com/deparadise/code_pot_BE#readme",
 	"devDependencies": {}
