@@ -1,3 +1,11 @@
 <h1>Compose</h1>
 
+{{#mdc-layout-grid as |grid|}}
+	{{#grid.inner as |inner|}}
+		{{#inner.cell span=6}}
+			{{endpoint/mock-up-form}}
+		{{/inner.cell}}
+	{{/grid.inner}}
+{{/mdc-layout-grid}}
+
 {{outlet}}
