@@ -1,0 +1,13 @@
+{{#mdc-tab-bar links=false as |bar|}}
+	{{#bar.tab active=isFirstActive become-active=(action (mut isFirstActive))}}
+		Fruits
+	{{/bar.tab}}
+	{{#bar.tab active=isSecondActive become-active=(action (mut isSecondActive))}}
+		Vegetables
+	{{/bar.tab}}
+	{{#bar.tab active=isThirdActive become-active=(action (mut isThirdActive))}}
+		Meats
+	{{/bar.tab}}
+{{/mdc-tab-bar}}
+
+{{yield}}
