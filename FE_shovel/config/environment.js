@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'fe-ember',
+    modulePrefix: 'fe_shovel',
     environment,
     rootURL: '/',
     locationType: 'auto',
