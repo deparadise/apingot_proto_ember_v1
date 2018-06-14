@@ -2,4 +2,8 @@
 /node_modules
 /bower_components
 
+# Dev logs
 yarn-error.log
+
+# Dynamic Distributions
+/client
