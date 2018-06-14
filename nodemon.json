@@ -1,4 +1,8 @@
 {
-	"_comment" : "Add directories not needed for development here",
-	"ignore": []
+	"_comment" : "Add files and directories not needed for development build updates here",
+	"ignore": [
+		"client",
+		"FE_shovel",
+		"FE_shovel/tmp"
+	]
 }
