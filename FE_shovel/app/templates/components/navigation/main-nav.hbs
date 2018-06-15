@@ -1,13 +1,10 @@
 <!-- main-nav -->
 {{#mdc-tab-bar links=false as |bar|}}
 	{{#bar.tab active=isFirstActive become-active=(action (mut isFirstActive))}}
-		Fruits
+		{{#link-to 'index'}}Home{{/link-to}}
 	{{/bar.tab}}
 	{{#bar.tab active=isSecondActive become-active=(action (mut isSecondActive))}}
-		Vegetables
-	{{/bar.tab}}
-	{{#bar.tab active=isThirdActive become-active=(action (mut isThirdActive))}}
-		Meats
+		{{#link-to 'compose'}}Endpoint Composer{{/link-to}}
 	{{/bar.tab}}
 {{/mdc-tab-bar}}
 
