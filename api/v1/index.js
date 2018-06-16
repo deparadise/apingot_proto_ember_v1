@@ -1,5 +1,7 @@
-console.log('> using /v1...');
+console.log('> Using /v1...');
 import express from 'express';
+
+import testing from '../testing';
 
 const v1 = express.Router();
 
@@ -12,5 +14,7 @@ v1.versionMeta = {
 v1.get('/', (req, res) => {
 	res.json(v1.versionMeta);
 });
+
+v1.use('/test', testing);
 
 module.exports = v1;

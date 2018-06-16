@@ -2,9 +2,9 @@ import express from 'express';
 const app = express();
 
 // Use BP for access to POST data
-import bodyParser from 'body-parser';
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+// import bodyParser from 'body-parser';
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
 // Include api module
 import api from './api';

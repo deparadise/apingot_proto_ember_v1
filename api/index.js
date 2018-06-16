@@ -1,4 +1,4 @@
-console.log('> using api...');
+console.log('> Using api...');
 import express from 'express';
 
 import v1 from './v1';
@@ -8,9 +8,7 @@ const api = express.Router();
 api.get('/', (req, res) => {
 	res.json({
 		regarding: 'code_pot',
-		versionsIncluded: [
-			v1.versionMeta
-		]
+		versionsIncluded: [v1.versionMeta]
 	});
 });
 
