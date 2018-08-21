@@ -1,17 +1,17 @@
 {
-	"name": "code_pot_BE",
+	"name": "codePlanter_Ex_Em",
 	"version": "0.0.1",
 	"description": "Starting Back End API Project",
 	"author": "David Pineda <david.pineda@deparadise.com>",
 	"license": "MIT",
 	"private": false,
-	"homepage": "https://github.com/deparadise/code_pot_BE#readme",
+	"homepage": "https://github.com/deparadise/codePlanter_Ex_Em#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/deparadise/code_pot_BE.git"
+		"url": "git+ssh://git@github.com/deparadise/codePlanter_Ex_Em.git"
 	},
 	"bugs": {
-		"url": "https://github.com/deparadise/code_pot_BE/issues"
+		"url": "https://github.com/deparadise/codePlanter_Ex_Em/issues"
 	},
 	"main": "app.js",
 	"scripts": {
