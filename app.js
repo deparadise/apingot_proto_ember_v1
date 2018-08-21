@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
-// Routes...
+// Endpoint routing...
 app.use('/api', api);
 
 // START APP...
-const port = process.env.PORT || 3000; // ENV dynamic port or static preset
-app.listen(port, () => console.log('Example app listening on port:', port));
+const PORT = process.env.PORT || 3000; // ENV dynamic PORT or static preset
+app.listen(PORT, () => console.log('Example app listening on PORT:', PORT));
