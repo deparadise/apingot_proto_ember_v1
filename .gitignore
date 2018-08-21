@@ -6,5 +6,6 @@
 yarn-error.log
 
 # Dynamic Distributions
+/dist
 /client
 /FE_shovel/tmp
