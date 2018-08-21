@@ -16,16 +16,24 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "tests",
-		"start": "nodemon app.js --exec babel-node --presets es2015,stage-2"
+		"develop": "nodemon app.js --exec babel-node --presets es2015,stage-2",
+		"clear_last_build": "rimraf dist/",
+		"build": "babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+		"start": "npm run clear_last_build && npm run build && node dist/app.js"
+	},
+	"engines": {
+		"node": "8.11.4",
+		"npm": "6.4.0"
 	},
 	"dependencies": {
-		"body-parser": "^1.18.3",
-		"express": "^4.16.3"
-	},
-	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-preset-es2015": "^6.24.1",
 		"babel-preset-stage-2": "^6.24.1",
+		"body-parser": "^1.18.3",
+		"rimraf": "^2.6.2",
+		"express": "^4.16.3"
+	},
+	"devDependencies": {
 		"eslint": "^4.19.1",
 		"nodemon": "^1.17.3"
 	}
