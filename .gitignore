@@ -9,3 +9,6 @@ yarn-error.log
 /dist
 /client
 /FE_shovel/tmp
+
+# DO NOT SHARE
+/config/private
