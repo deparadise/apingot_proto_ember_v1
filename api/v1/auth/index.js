@@ -1,18 +1,16 @@
 console.log('> Using v1 Auth...');
 import express from 'express';
 
+import googleAuth from './google-oauth';
+
 const auth = express.Router();
 
 auth.get('/', (req, res) => {
-  res.json({
-    standard: 'email-PW'
-  });
+	res.json({
+		standard: 'email-PW'
+	});
 })
 
-auth.get('/google', (req, res) => {
-  res.json({
-    leggo: 'my-eggo Oauth'
-  });
-})
+auth.use('/google', googleAuth);
 
 module.exports = auth;
