@@ -7,12 +7,14 @@ import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 passport.use(
 	new GoogleStrategy(
+		// >>> Oauth Request Setup
 		{
 			clientID: privateKeys.google.clientID,
 			clientSecret: privateKeys.google.clientSecret,
-			callbackURL: '/auth/google/callback'
+			callbackURL: 'api/v1/auth/google/callback'
 		},
-		(accessToken) => { // <<< AT handle
+		// <<< authorization confirmed handle on callback
+		(accessToken) => {
 			console.log('Handle AT:', accessToken);
 		}
 	)
@@ -34,6 +36,10 @@ googleAuth.get('/', passport.authenticate(
 			'email'
 		]
 	}
+));
+
+googleAuth.get('/callback', passport.authenticate(
+	'google'
 ));
 
 module.exports = googleAuth;
