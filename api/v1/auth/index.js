@@ -9,7 +9,7 @@ auth.get('/', (req, res) => {
 	res.json({
 		standard: 'email-PW'
 	});
-})
+});
 
 auth.use('/google', googleAuth);
 
