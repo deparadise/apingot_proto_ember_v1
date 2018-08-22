@@ -4,7 +4,7 @@ import express from 'express';
 const testing = express.Router();
 
 testing.get('/', (req, res) => {
-	console.log('>> TEST HAS REQUEST:', req);
+	console.log('>> TEST HAS REQUEST PARAM:', req);
 
 	//...
 
