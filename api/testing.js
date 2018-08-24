@@ -1,7 +1,7 @@
 console.log('> Using Testing...');
 import express from 'express';
 
-import slate from '../app/services/slate';
+import slate from './services/slate';
 
 const testing = express.Router();
 
