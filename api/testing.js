@@ -1,10 +1,13 @@
 console.log('> Using Testing...');
 import express from 'express';
 
+import slate from '../app/services/slate';
+
 const testing = express.Router();
 
 testing.get('/', (req, res) => {
-	console.log('>> TEST HAS REQUEST:', req);
+	slate.doSomething('later');
+	// console.log('>> TEST HAS REQUEST:', req);
 
 	//...
 
