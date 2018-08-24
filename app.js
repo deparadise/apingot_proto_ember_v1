@@ -1,6 +1,10 @@
 import express from 'express';
 const app = express();
 
+// TODO: middleware TBD
+// Init Configuration
+require(`${__dirname}/api/services/passport`);
+// import passportConfig from './api/services/passport';
 // Use BP for access to POST data
 // import bodyParser from 'body-parser';
 // app.use(bodyParser.urlencoded({ extended: true }));
@@ -9,7 +13,7 @@ const app = express();
 // Include api module
 import api from './api';
 
-// ROOT serves FE_shovel client...
+// ROOT EP serves built client...
 const path = require('path');
 app.use(express.static(__dirname + '/client'));
 app.get('/', (req, res) => {
