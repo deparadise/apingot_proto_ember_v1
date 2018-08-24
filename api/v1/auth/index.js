@@ -1,4 +1,4 @@
-console.log('> Using v1 Auth...');
+console.log('>> Using v1 Auth');
 import express from 'express';
 
 import googleAuth from './google-oauth';

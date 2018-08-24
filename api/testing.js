@@ -1,4 +1,4 @@
-console.log('> Using Testing...');
+console.log('>> Using Testing');
 import express from 'express';
 
 import slate from './services/slate';
@@ -9,9 +9,7 @@ testing.get('/', (req, res) => {
 	slate.doSomething('later');
 	// console.log('>> TEST HAS REQUEST:', req);
 
-	//...
-
-	res.send('some json soon....');
+	res.send('some json soon >>>');
 });
 
 module.exports = testing;

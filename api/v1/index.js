@@ -1,4 +1,4 @@
-console.log('> Using /v1...');
+console.log('>> Using /v1');
 import express from 'express';
 
 import auth from './auth';

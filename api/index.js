@@ -1,4 +1,4 @@
-console.log('> Using api...');
+console.log('>> Using api');
 import express from 'express';
 
 import v1 from './v1';

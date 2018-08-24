@@ -13,16 +13,16 @@ require(`${__dirname}/api/services/passport`);
 // Include api module
 import api from './api';
 
-// ROOT EP serves built client...
+// ROOT EP serves built client
 const path = require('path');
 app.use(express.static(__dirname + '/client'));
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
-// Endpoint routing...
+// Endpoint routing
 app.use('/api', api);
 
-// START APP...
+// START APP
 const PORT = process.env.PORT || 3000; // ENV dynamic PORT or static preset
 app.listen(PORT, () => console.log('Example app listening on PORT:', PORT));
