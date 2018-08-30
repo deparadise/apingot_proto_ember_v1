@@ -16,12 +16,13 @@
 	"main": "index.js",
 	"scripts": {
 		"clear_last_build": "rimraf client/ && rimraf dist/",
+		"install_Ember": "npm install -g ember-cli",
 		"check_Ember": "ember -v",
 		"build_Ember": "cd FE_shovel && yarn && ember build",
 		"start_Ember_dev": "cd FE_shovel && ember s --port 4500",
 		"develop": "npm run build_Ember && nodemon index.js --exec babel-node --presets es2015,stage-2",
 		"generate_dist": "babel ./ --out-dir dist/ --ignore ./node_modules,./FE_shovel,./client,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
-		"start": "npm run clear_last_build && npm run check_Ember && npm run generate_dist && npm run build_Ember && node dist/index.js"
+		"start": "npm run clear_last_build && npm run install_Ember && npm run check_Ember && npm run generate_dist && npm run build_Ember && node dist/index.js"
 	},
 	"engines": {
 		"node": "8.11.4",
