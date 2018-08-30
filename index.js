@@ -15,9 +15,15 @@ import api from './api';
 
 // ROOT EP serves built client
 const path = require('path');
-app.use(express.static(__dirname + '/client'));
+const PATH_TO_DIST = path.join(__dirname + '/client');
+console.log('>>>--> STATIC DIST: ', PATH_TO_DIST);
+
+app.use(express.static(PATH_TO_DIST));
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname + '/client/index.html'));
+	// Not sure if this gets used during deployment /:0(
+	let clientAppPath = path.join(__dirname + '/client/index.html');
+	console.log('>> Request for clientAppPath:', clientAppPath);
+	res.sendFile(clientAppPath);
 });
 
 // Endpoint routing
