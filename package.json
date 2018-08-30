@@ -16,7 +16,7 @@
 	"main": "index.js",
 	"scripts": {
 		"add_g_concurrently": "npm install -g concurrently",
-		"clear_last_build": "rimraf client/ && rimraf dist/",
+		"clear_last_build": "rimraf app/",
 
 		"install_Ember": "npm install -g ember-cli",
 		"check_Ember": "ember -v",
@@ -24,12 +24,12 @@
 		"start_Ember_dev": "cd FE_shovel && ember s --port 4500",
 
 		"start_ingot": "nodemon index.js --exec babel-node --presets es2015,stage-2",
-		"generate_dist": "babel ./ --out-dir dist/ --ignore ./node_modules,./FE_shovel,./client,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
+		"generate_dist": "babel ./ --out-dir app/dist/ --ignore ./node_modules,./FE_shovel,./client,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
 
 		"Ember": "npm run install_Ember && npm run check_Ember && npm run build_Ember",
-		"Ingot": "npm run generate_dist && node dist/index.js",
+		"cast_Ingot": "npm run generate_dist && node app/dist/index.js",
 
-		"start": "npm run clear_last_build && npm run add_g_concurrently && concurrently \"npm run Ingot\" \"npm run Ember\""
+		"start": "npm run clear_last_build && npm run add_g_concurrently && concurrently \"npm run cast_Ingot\" \"npm run Ember\""
 	},
 	"engines": {
 		"node": "8.11.4",
