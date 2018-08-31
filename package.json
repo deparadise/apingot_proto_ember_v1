@@ -1,5 +1,5 @@
 {
-	"name": "codePlanter_Ex_Em",
+	"name": "APIngot_Proto",
 	"version": "0.0.1",
 	"description": "Starting Back End API Project",
 	"author": "David Pineda <david.pineda@deparadise.com>",
@@ -15,21 +15,27 @@
 	},
 	"main": "index.js",
 	"scripts": {
-		"add_g_concurrently": "npm install -g concurrently",
+		"add_g_deps": "npm install -g copyfiles && npm install -g ncp && npm install -g ember-cli",
+
+		"clear_last_shipped_Ingot": "rimraf ../pineapple-planter/dist && rimraf ../pineapple-planter/package.json",
 		"clear_last_build": "rimraf dist/",
+		"clear": "npm run clear_last_shipped_Ingot && npm run clear_last_build",
 
-		"install_Ember": "npm install -g ember-cli",
 		"check_Ember": "ember -v",
-		"build_Ember": "cd ingot_ember_FE && yarn && ember build",
-		"start_Ember_dev": "cd ingot_ember_FE && ember s --port 4500",
+		"make_Ember_cast": "cd ingot_ember_FE && yarn && ember build",
+		"work_on_Ember_cast_source": "cd ingot_ember_FE && ember s --port 4500",
 
-		"start_ingot": "nodemon index.js --exec babel-node --presets es2015,stage-2",
-		"generate_dist": "babel ./ --out-dir dist/ --ignore ./node_modules,./ingot_ember_FE,./client,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
+		"make_APIngot": "babel ./ --out-dir dist/ --ignore ./node_modules,./ingot_ember_FE,./client,./dist,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
+		"work_on_Ingot_source": "nodemon index.js --exec babel-node --presets es2015,stage-2",
+		"stoke_local_test_Ingot": "npm run clear_last_build && npm run make_APIngot && npm run make_Ember_cast && node dist/index.js",
 
-		"Ember": "npm run install_Ember && npm run check_Ember && npm run build_Ember",
-		"Ingot": "npm run generate_dist && node dist/index.js",
+		"copy_package": "copyfiles package.json ../pineapple-planter",
+		"copy_dist": "ncp ./dist ../pineapple-planter/dist",
+		"shipIt": "npm run copy_package && npm run copy_dist",
+		"cast_Ember_Ingot": "npm run clear_last_build && npm run make_APIngot && npm run make_Ember_cast",
+		"ship_new_Ingot": "npm run clear && npm run cast_Ember_Ingot && npm run shipIt",
 
-		"start": "npm run clear_last_build && npm run add_g_concurrently && concurrently \"npm run Ingot\" \"npm run Ember\""
+		"start": "node dist/index.js"
 	},
 	"engines": {
 		"node": "8.11.4",
