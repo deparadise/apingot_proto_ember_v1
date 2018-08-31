@@ -16,7 +16,7 @@
 	"main": "index.js",
 	"scripts": {
 		"add_g_concurrently": "npm install -g concurrently",
-		"clear_last_build": "rimraf client/ && rimraf dist/",
+		"clear_last_build": "rimraf dist/",
 
 		"install_Ember": "npm install -g ember-cli",
 		"check_Ember": "ember -v",
