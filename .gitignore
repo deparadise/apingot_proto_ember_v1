@@ -8,7 +8,7 @@ yarn-error.log
 # Dynamic Distributions
 /dist
 /client
-/FE_shovel/tmp
+/ingot_ember_FE/tmp
 
 # DO NOT SHARE
 /config/private

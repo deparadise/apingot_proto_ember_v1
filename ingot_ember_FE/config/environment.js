@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
 	let ENV = {
-		modulePrefix: 'fe_shovel',
+		modulePrefix: 'ingot_ember_FE',
 		environment,
 		rootURL: '/',
 		locationType: 'auto',

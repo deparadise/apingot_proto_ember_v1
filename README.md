@@ -10,7 +10,7 @@ Starting Back End API project
 - yarn --ignore-engines
 - yarn start
 
-## w/ FE_Shovel
+## w/ ingot_ember_FE
 
 Starring:
 ember-material-components-web
