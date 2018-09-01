@@ -22,10 +22,10 @@
 		"clear": "npm run clear_last_shipped_Ingot && npm run clear_last_build",
 
 		"check_Ember": "ember -v",
-		"make_Ember_cast": "cd ingot_ember_FE && yarn && ember build",
-		"work_on_Ember_cast_source": "cd ingot_ember_FE && ember s --port 4500",
+		"make_Ember_cast": "cd client && yarn && ember build",
+		"work_on_Ember_cast_source": "cd client && ember s --port 4500",
 
-		"make_APIngot": "babel ./ --out-dir dist/ --ignore ./node_modules,./ingot_ember_FE,./client,./dist,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
+		"make_APIngot": "babel ./ --out-dir dist/ --ignore ./node_modules,./client,./client,./dist,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
 		"work_on_Ingot_source": "nodemon index.js --exec babel-node --presets es2015,stage-2",
 		"stoke_local_test_Ingot": "npm run clear_last_build && npm run make_APIngot && npm run make_Ember_cast && node dist/index.js",
 
@@ -36,6 +36,7 @@
 		"cast_Ember_Ingot": "npm run clear_last_build && npm run make_APIngot && npm run make_Ember_cast",
 		"ship_new_Ingot": "npm run clear && npm run cast_Ember_Ingot && npm run shipIt",
 
+		"start_local": "yarn cast_Ember_Ingot && node dist/index.js",
 		"start": "node dist/index.js"
 	},
 	"engines": {

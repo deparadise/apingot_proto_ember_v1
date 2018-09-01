@@ -1,3 +1,5 @@
 # NOT FOR DEPLOYMENT BUB!
 node_modules/
 .DS_Store
+dist/yarn-error.log
+dist/config/private
