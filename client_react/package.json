@@ -1,18 +1,18 @@
 {
-  "name": "react_ingot",
-  "version": "1.0.0",
-  "description": "Starting React Sandbox",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "React",
-    "Redux"
-  ],
-  "author": "david.pineda@deparadise.com",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^16.10.2"
-  }
+	"name": "react_ingot",
+	"version": "1.0.0",
+	"description": "Starting React Sandbox",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"React",
+		"Redux"
+	],
+	"author": "david.pineda@deparadise.com",
+	"license": "ISC",
+	"dependencies": {
+		"react": "^16.10.2"
+	}
 }
