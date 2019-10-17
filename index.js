@@ -21,7 +21,7 @@ console.log('>>>--> STATIC DIST: ', PATH_TO_DIST);
 app.use(express.static(PATH_TO_DIST));
 app.get('/', (req, res) => {
 	// Not sure if this gets used during deployment /:0(
-	let clientAppPath = path.join(__dirname + '/client/index.html');
+	let clientAppPath = path.join(__dirname + '/client-dist/index.html');
 	console.log('>> Request for clientAppPath:', clientAppPath);
 	res.sendFile(clientAppPath);
 });
