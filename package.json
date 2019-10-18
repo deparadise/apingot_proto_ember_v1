@@ -15,27 +15,23 @@
 	},
 	"main": "index.js",
 	"scripts": {
+		"format_react_client": "prettier \"client_react/**/*.{js,html,css}\" --write",
 		"add_g_deps": "npm install -g ncp && npm install -g ember-cli",
-
 		"clear_last_shipped_Ingot": "rimraf ../pineapple-planter/.gitignore && rimraf ../pineapple-planter/dist && rimraf ../pineapple-planter/package.json",
 		"clear_last_build": "rimraf dist/",
 		"clear": "npm run clear_last_shipped_Ingot && npm run clear_last_build",
-
 		"check_Ember": "ember -v",
 		"make_Ember_cast": "cd client && yarn && ember build",
 		"work_on_Ember_cast_source": "cd client && ember s --port 4500",
-
 		"make_APIngot": "babel ./ --out-dir dist/ --ignore ./node_modules,./client,./client,./dist,./nodemon.json,./README.md,./yarn.lock,./.babelrc,./package.json,./npm-debug.log --copy-files",
 		"work_on_Ingot_source": "nodemon index.js --exec babel-node --presets es2015,stage-2",
 		"stoke_local_test_Ingot": "npm run clear_last_build && npm run make_APIngot && npm run make_Ember_cast && node dist/index.js",
-
 		"copy_gitignore_deploy": "cp .gitignore_deploy ../pineapple-planter/.gitignore",
 		"copy_package": "cp package.json ../pineapple-planter",
 		"copy_dist": "ncp ./dist ../pineapple-planter/dist",
 		"shipIt": "npm run copy_gitignore_deploy && npm run copy_package && npm run copy_dist",
 		"cast_Ember_Ingot": "npm run clear_last_build && npm run make_APIngot && npm run make_Ember_cast",
 		"ship_new_Ingot": "npm run clear && npm run cast_Ember_Ingot && npm run shipIt",
-
 		"start_local": "yarn cast_Ember_Ingot && node dist/index.js",
 		"start": "node dist/index.js"
 	},
@@ -55,6 +51,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^4.19.1",
-		"nodemon": "^1.17.3"
+		"nodemon": "^1.17.3",
+		"prettier": "^1.18.2"
 	}
 }
