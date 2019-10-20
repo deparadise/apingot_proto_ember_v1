@@ -15,7 +15,7 @@ import api from './api';
 
 // ROOT EP serves built client
 const path = require('path');
-const PATH_TO_DIST = path.join(__dirname + '/client');
+const PATH_TO_DIST = path.join(__dirname + '/client-dist');
 console.log('>>>--> STATIC DIST: ', PATH_TO_DIST);
 
 app.use(express.static(PATH_TO_DIST));
